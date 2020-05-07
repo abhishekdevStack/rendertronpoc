@@ -29,8 +29,11 @@ app.use(
     userAgentPattern: new RegExp(bots.join("|"), "i"),
   })
 );
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname));
+});
 
-app.use(express.static(path.join(__dirname, "dist")));
-app.use("*", express.static(path.join(__dirname, "dist")));
+app.use(express.static(path.join(__dirname, "/dist/my-first-app")));
+// app.use("*", express.static(path.join(__dirname, "dist")));
 
 module.exports = app;
