@@ -22,8 +22,8 @@ const bots = [
   "W3C_Validator",
   "whatsapp",
 ];
-//render.example.com/render
-https: app.use(
+
+app.use(
   rendertron.makeMiddleware({
     proxyUrl: "https://crwn-db-2a4e6.uc.r.appspot.com/",
     userAgentPattern: new RegExp(bots.join("|"), "i"),
