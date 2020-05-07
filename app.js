@@ -22,10 +22,10 @@ const bots = [
   "W3C_Validator",
   "whatsapp",
 ];
-
-app.use(
+//render.example.com/render
+https: app.use(
   rendertron.makeMiddleware({
-    proxyUrl: "https://render.example.com/render",
+    proxyUrl: "https://crwn-db-2a4e6.uc.r.appspot.com/",
     userAgentPattern: new RegExp(bots.join("|"), "i"),
   })
 );
