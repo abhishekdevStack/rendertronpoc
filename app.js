@@ -25,7 +25,7 @@ const bots = [
 
 app.use(
   rendertron.makeMiddleware({
-    proxyUrl: "https://crwn-db-2a4e6.uc.r.appspot.com/",
+    proxyUrl: "https://crwn-db-2a4e6.uc.r.appspot.com/render",
     userAgentPattern: new RegExp(bots.join("|"), "i"),
   })
 );
