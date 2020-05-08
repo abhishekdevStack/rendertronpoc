@@ -19,7 +19,8 @@ export class HomeComponent implements OnInit {
       title: "About Page",
       description:
         "Contact me through this awesome search engine optimized Angular component",
-      image: "https://www.example.com/assets/meerkat.jpeg",
+      image:
+        "https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       slug: "about-page",
     });
   }
