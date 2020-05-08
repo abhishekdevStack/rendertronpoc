@@ -5,7 +5,6 @@ const app = express();
 const path = require("path");
 const appUrl = "arcane-ridge-37333.herokuapp.com";
 const renderUrl = "https://crwn-db-2a4e6.uc.r.appspot.com/render";
-app.use("/", express.static(__dirname + "/dist/my-first-app"));
 
 function generateUrl(request) {
   return url.format({
@@ -70,13 +69,17 @@ app.get("*", (req, res) => {
       });
   } else {
     console.log("you are a human!");
-    res.sendFile(path.join(__dirname + "/dist/my-first-app", "index.html"));
+    res.sendFile(path.join(__dirname, "dist/my-first-app"));
   }
 });
-app.use(function (req, res, next) {
-  var err = new Error("Not Found");
-  err.status = 404;
-  next(err);
+// app.use(function (req, res, next) {
+//   var err = new Error("Not Found");
+//   err.status = 404;
+//   next(err);
+// });
+app.use(express.static(path.join(__dirname, "dist/my-first-app"));
+app.use("*", express.static(path.join(__dirname, "dist/my-first-app")));
+app.listen(3000, function () {
+  console.log("Vola!! The app is listening on port 3000!");
 });
-
 module.exports = app;
