@@ -38,6 +38,7 @@ function detectBot(userAgent) {
     "W3C_Validator",
   ];
   const agent = userAgent.toLowerCase();
+  console.log("userAgent", userAgent);
   for (const bot of bots) {
     if (agent.indexOf(bot) > -1) {
       console.log("bot detected", bot, agent);
@@ -81,6 +82,6 @@ var port = process.env.PORT || 1337;
 app.use(express.static(path.join(__dirname, "dist/my-first-app")));
 app.use("*", express.static(path.join(__dirname, "dist/my-first-app")));
 app.listen(port, function () {
-  console.log("Vola!! The app is listening on port 3000!");
+  console.log("Vola!! The app is listening on port", port);
 });
 module.exports = app;
