@@ -22,35 +22,22 @@ const bots = [
   "W3C_Validator",
   "whatsapp",
   "mozilla/5.0 (x11; linux x86_64) applewebkit/537.36 (khtml, like gecko) headlesschrome/79.0.3945.0 safari/537.36",
+  "mozilla",
+  "applewebkit",
+  "headlesschrome",
 ];
-// app.set("view engine", "ejs");
+const BOTS = rendertron.botUserAgents.concat(bots.join(","));
+const BOT_UA_PATTERN = new RegExp(BOTS.join("|"), "i");
 app.use(
   rendertron.makeMiddleware({
     proxyUrl: "https://crwn-db-2a4e6.uc.r.appspot.com/render",
-    userAgentPattern: new RegExp(bots.join("|"), "i"),
+    userAgentPattern: BOT_UA_PATTERN,
   })
 );
-// Set 'views' directory for any views
-// being rendered res.render()
-// app.set("views", path.join(__dirname, "views"));
-// console.log(path.join(__dirname, "views"));
-// app.get("/testing", function (req, res) {
-//   let metaTagInfo = [
-//     {
-//       image:
-//         "https://images.pexels.com/photos/47367/full-moon-moon-bright-sky-47367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-//     },
-//   ];
-//   res.render("pages/testing.ejs", { metaTagInfo: metaTagInfo });
-// });
-// app.get("/*", function (req, res) {
-//   res.sendFile(path.join(__dirname));
-// });
-app.get("/testing", function (req, res) {
-  console.log(req.get("User-Agent"));
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname));
 });
 
-app.use(express.static(path.join(__dirname, "/dist/my-first-app")));
-app.use("*", express.static(path.join(__dirname, "/dist/my-first-app")));
+app.get("*", express.static(path.join(__dirname, "/dist/my-first-app")));
 
 module.exports = app;
