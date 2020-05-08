@@ -79,7 +79,4 @@ app.use(function (req, res, next) {
   next(err);
 });
 
-app.listen(8000, function () {
-  console.log("Vola!! The app is listening on port 8000!");
-});
 module.exports = app;
