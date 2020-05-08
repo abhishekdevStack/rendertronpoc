@@ -77,9 +77,10 @@ app.get("*", (req, res) => {
 //   err.status = 404;
 //   next(err);
 // });
+var port = process.env.PORT || 1337;
 app.use(express.static(path.join(__dirname, "dist/my-first-app")));
 app.use("*", express.static(path.join(__dirname, "dist/my-first-app")));
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log("Vola!! The app is listening on port 3000!");
 });
 module.exports = app;
