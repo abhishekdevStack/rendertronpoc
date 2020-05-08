@@ -5,7 +5,7 @@ const app = express();
 const path = require("path");
 const appUrl = "arcane-ridge-37333.herokuapp.com";
 const renderUrl = "https://crwn-db-2a4e6.uc.r.appspot.com/render";
-app.use("/", express.static(__dirname + "/../dist"));
+app.use("/", express.static(__dirname + "/dist"));
 
 function generateUrl(request) {
   return url.format({
