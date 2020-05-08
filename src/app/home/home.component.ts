@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
       description:
         "Contact me through this awesome search engine optimized Angular component",
       image:
-        "https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/1120162/pexels-photo-1120162.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
       slug: "about-page",
     });
   }
