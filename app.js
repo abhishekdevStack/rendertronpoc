@@ -77,7 +77,7 @@ app.get("*", (req, res) => {
 //   err.status = 404;
 //   next(err);
 // });
-app.use(express.static(path.join(__dirname, "dist/my-first-app"));
+app.use(express.static(path.join(__dirname, "dist/my-first-app")));
 app.use("*", express.static(path.join(__dirname, "dist/my-first-app")));
 app.listen(3000, function () {
   console.log("Vola!! The app is listening on port 3000!");
