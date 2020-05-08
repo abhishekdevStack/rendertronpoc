@@ -59,7 +59,6 @@ app.get("/*", function (req, res) {
     fetch(`${renderUrl}/${botUrl}`)
       .then((res) => res.text())
       .then((body) => {
-        console.log("body", body.toString());
         res.send(body.toString());
       });
   } else {
