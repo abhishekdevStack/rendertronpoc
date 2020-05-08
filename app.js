@@ -35,7 +35,7 @@ app.use(
   })
 );
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname));
+  res.sendFile(path.join(__dirname, "/dist/my-first-app/index.html"));
 });
 
 app.get("*", express.static(path.join(__dirname, "/dist/my-first-app")));
