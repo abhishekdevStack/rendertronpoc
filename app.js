@@ -34,6 +34,6 @@ app.get("/*", function (req, res) {
 });
 
 app.use(express.static(path.join(__dirname, "/dist/my-first-app")));
-// app.use("*", express.static(path.join(__dirname, "dist")));
+app.use("*", express.static(path.join(__dirname, "/dist/my-first-app")));
 
 module.exports = app;

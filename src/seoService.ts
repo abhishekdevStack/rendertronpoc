@@ -12,7 +12,7 @@ export class SeoService {
       slug: "",
       ...config,
     };
-
+    debugger;
     this.meta.updateTag({ name: "twitter:card", content: "summary" });
     this.meta.updateTag({ name: "twitter:site", content: "@content" });
     this.meta.updateTag({ name: "twitter:title", content: config.title });
