@@ -37,10 +37,6 @@ function detectBot(userAgent) {
     "facebot",
     "outbrain",
     "W3C_Validator",
-    "mozilla/5.0 (x11; linux x86_64) applewebkit/537.36 (khtml, like gecko) headlesschrome/79.0.3945.0 safari/537.36",
-    "mozilla",
-    "applewebkit",
-    "headlesschrome",
   ];
   const agent = userAgent.toLowerCase();
   for (const bot of bots) {
