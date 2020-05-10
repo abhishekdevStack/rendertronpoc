@@ -26,6 +26,7 @@ export class ServersComponent implements OnInit {
       image:
         "https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       slug: "servers-page",
+      url: "https://arcane-ridge-37333.herokuapp.com/servers",
     });
   }
 

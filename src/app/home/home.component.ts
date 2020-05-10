@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
       image:
         "https://images.pexels.com/photos/3817038/pexels-photo-3817038.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
       slug: "about-page",
+      url: "https://arcane-ridge-37333.herokuapp.com/",
     });
   }
 

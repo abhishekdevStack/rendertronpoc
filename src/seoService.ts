@@ -31,7 +31,7 @@ export class SeoService {
     this.meta.updateTag({ property: "og:image", content: config.image });
     this.meta.updateTag({
       property: "og:url",
-      content: `https://arcane-ridge-37333.herokuapp.com/`,
+      content: config.url,
     });
   }
 }
