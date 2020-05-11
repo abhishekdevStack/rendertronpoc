@@ -24,7 +24,7 @@ export class ServersComponent implements OnInit {
       title: "Servers Page",
       description: "Find All detail about servers",
       image:
-        "https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
       slug: "servers-page",
       url: "https://arcane-ridge-37333.herokuapp.com/servers",
     });
