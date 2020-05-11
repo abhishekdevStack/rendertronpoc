@@ -25,6 +25,7 @@ function detectBot(userAgent) {
     "duckduckbot",
     "slurp",
     // link bots
+
     "twitterbot",
     "facebookexternalhit",
     "linkedinbot",
