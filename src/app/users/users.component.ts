@@ -27,8 +27,8 @@ export class UsersComponent implements OnInit {
       title: "Users Page",
       description: "Find All detail about users",
       image:
-        "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      slug: "servers-page",
+        "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      slug: "users",
       url: "https://arcane-ridge-37333.herokuapp.com/users",
     });
   }
